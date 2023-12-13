@@ -16,14 +16,21 @@
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="gender" class="leading-7 text-sm text-gray-300">Gender</label>
-                            <input type="text" id="gender" name="gender"
-                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <select
+                                class="form-select"
+                                id="gender"
+                                style="background-color: #212529; color: white"
+                            >
+                                <option selected>Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
                         </div>
                     </div>
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="age" class="leading-7 text-sm text-gray-300">Age</label>
-                            <input type="text" id="age" name="age"
+                            <input type="number" id="age" name="age" min="0" max="150"
                                 class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
@@ -32,15 +39,29 @@
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="hypertension" class="leading-7 text-sm text-gray-300">Hypertension</label>
-                            <input type="text" id="hypertension" name="hypertension"
-                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <select
+                                class="form-select"
+                                id="hypertension"
+                                style="background-color: #212529; color: white"
+                            >
+                                <option selected>Select Hypertension</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </div>
                     </div>
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="heart-disease" class="leading-7 text-sm text-gray-300">Heart Disease</label>
-                            <input type="text" id="heart-disease" name="heart-disease"
-                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <select
+                                class="form-select"
+                                id="heart-disease"
+                                style="background-color: #212529; color: white"
+                            >
+                                <option selected>Select Heart Disease</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -48,14 +69,22 @@
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="smoking-history" class="leading-7 text-sm text-gray-300">Smoking History</label>
-                            <input type="text" id="smoking-history" name="smoking-history"
-                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <select
+                                class="form-select"
+                                id="smoking-history"
+                                style="background-color: #212529; color: white"
+                            >
+                                <option selected>Select Smoking History</option>
+                                <option value="Current">Current</option>
+                                <option value="Non-Smoker">Non-Smoker</option>
+                                <option value="Past-Smoker">Past-Smoker</option>
+                            </select>
                         </div>
                     </div>
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="bmi" class="leading-7 text-sm text-gray-300">BMI</label>
-                            <input type="text" id="bmi" name="bmi"
+                            <input type="number" id="bmi" name="bmi" min="10" max="50"
                                 class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
@@ -64,14 +93,14 @@
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="hba1c-level" class="leading-7 text-sm text-gray-300">HbA1c Level</label>
-                            <input type="text" id="hba1c-level" name="hba1c-level"
+                            <input type="number" id="hba1c-level" name="hba1c-level" step="0.1" min="4" max="15"
                                 class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
                             <label for="blood-glucose-level" class="leading-7 text-sm text-gray-300">Blood Glucose Level</label>
-                            <input type="text" id="blood-glucose-level" name="blood-glucose-level"
+                            <input type="number" id="blood-glucose-level" name="blood-glucose-level" step="0.1" min="50" max="300"
                                 class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                         </div>
                     </div>
@@ -83,5 +112,6 @@
         </div>
     </div>
 </section>
+
 
 {% endblock body %}
