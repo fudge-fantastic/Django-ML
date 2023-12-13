@@ -11,3 +11,6 @@ def Prediction(request):
 def About(request):
     return render(request, 'About.html')
 
+def Contact(request):
+    return render(request, 'Contact.html')
+

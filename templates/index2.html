@@ -3,24 +3,25 @@
 {% block title %}Home{% endblock title %}
 
 <!--In this block we'll have our content, upper one is header, and the bottom one is footer-->
-{% block body %}  
+{% block body %} 
+{% load static %}
 <section class="text-white bg-dark body-font">
     <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -mx-4 -mb-10 text-center">
             <div class="sm:w-1/2 mb-10 px-4">
                 <div class="rounded-lg h-64 overflow-hidden">
-                    <img alt="content" class="object-cover object-center h-full w-full" src="static\mellow.jpg">
+                  <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1202x502">
                 </div>
                 <h2 class="title-font text-2xl font-medium text-white mt-6 mb-3">Diabetes Prediction</h2>
-                <p class="leading-relaxed text-base">Check if you have Diabetes or not with some of the given features using a predictive model - GradientBoostingClassifier</p>
+                <p class="leading-relaxed text-justify">Because who needs crystal balls when you can have blood sugar readings telling your future? Forget horoscopes; just check your glucose levels for a sneak peek into the thrilling saga of 'Will I or won't I need insulin today?'</p>
                 <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Check Out!</button>
             </div>
             <div class="sm:w-1/2 mb-10 px-4">
                 <div class="rounded-lg h-64 overflow-hidden">
                     <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1202x502">
                 </div>
-                <h2 class="title-font text-2xl font-medium text-white mt-6 mb-3">Loan Prediction</h2>
-                <p class="leading-relaxed text-base">Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch, slow-carb neutra irony.</p>
+                <h2 class="title-font text-2xl font-medium text-white mt-6 mb-3">House Rent Prediction</h2>
+                <p class="leading-relaxed text-justify">Where your dreams of affordable housing go to laugh themselves into oblivion. Because, let's face it, finding an economical place is like searching for a unicorn – magical, mythical, and probably doesn't exist in this reality.</p>
                 <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Check Out!</button>
             </div>
         </div>
@@ -115,7 +116,7 @@
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
               <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
-            <span class="title-font font-medium">Authentic Cliche Forage</span>
+            <span class="title-font font-medium">Easy to use</span>
           </div>
         </div>
         <div class="p-2 sm:w-1/2 w-full">
@@ -133,7 +134,7 @@
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
               <path d="M22 4L12 14.01l-3-3"></path>
             </svg>
-            <span class="title-font font-medium">Coloring Book Ethical</span>
+            <span class="title-font font-medium">Well, atleast I made something, you dipshit</span>
           </div>
         </div>
         <div class="p-2 sm:w-1/2 w-full">

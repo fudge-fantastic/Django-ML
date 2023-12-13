@@ -1,3 +1,87 @@
 {% extends "index.html" %}
 
 {% block title %}Prediction{% endblock title %}
+
+{% block body %}
+
+<section class="text-white body-font">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">Patient Health Prediction</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Please provide the following health information for accurate prediction.</p>
+        </div>
+        <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-4 sm:px-0 items-end">
+            <form class="flex flex-col w-full">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="gender" class="leading-7 text-sm text-gray-300">Gender</label>
+                            <input type="text" id="gender" name="gender"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="age" class="leading-7 text-sm text-gray-300">Age</label>
+                            <input type="text" id="age" name="age"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="hypertension" class="leading-7 text-sm text-gray-300">Hypertension</label>
+                            <input type="text" id="hypertension" name="hypertension"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="heart-disease" class="leading-7 text-sm text-gray-300">Heart Disease</label>
+                            <input type="text" id="heart-disease" name="heart-disease"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="smoking-history" class="leading-7 text-sm text-gray-300">Smoking History</label>
+                            <input type="text" id="smoking-history" name="smoking-history"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="bmi" class="leading-7 text-sm text-gray-300">BMI</label>
+                            <input type="text" id="bmi" name="bmi"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="hba1c-level" class="leading-7 text-sm text-gray-300">HbA1c Level</label>
+                            <input type="text" id="hba1c-level" name="hba1c-level"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full sm:w-1/2">
+                        <div class="relative">
+                            <label for="blood-glucose-level" class="leading-7 text-sm text-gray-300">Blood Glucose Level</label>
+                            <input type="text" id="blood-glucose-level" name="blood-glucose-level"
+                                class="w-full bg-gray-800 bg-opacity-50 rounded border border-gray-600 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-white py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="text-white bg-indigo-500 border-0 py-2 px-8 mt-4 mx-auto focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict Health</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

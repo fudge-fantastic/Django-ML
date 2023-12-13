@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.Home, name='home'),
     # From home, we have views files, and in that file, we're importing a function which we wrote 
     path('prediction', views.Prediction, name='prediction'),
-    path('about', views.About, name='about')
+    path('about', views.About, name='about'),
+    path('contact', views.Contact, name='contact')
 ]
