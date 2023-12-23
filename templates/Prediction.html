@@ -9,9 +9,13 @@
         <div class="flex flex-col text-center w-full mb-12">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">Patient Health Prediction</h1>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Please provide the following health information for prediction. Input irrelevant info to die :)</p>
+            <br><strong>{% if output %}
+                <h2>Result : {{output}}</h2>
+                {% endif %}</strong>
         </div>
         <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-4 sm:px-0 items-end">
-            <form class="flex flex-col w-full">
+            <form method="post" action="/prediction" class="flex flex-col w-full">
+                {% csrf_token %}
                 <div class="flex flex-wrap -m-2">
                     <div class="p-2 w-full sm:w-1/2">
                         <div class="relative">
@@ -19,11 +23,13 @@
                             <select
                                 class="form-select"
                                 id="gender"
+                                name="gender"
                                 style="background-color: #212529; color: white"
                             >
                                 <option selected>Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <!--Write the given values which we did in the prediction model-->
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
                             </select>
                         </div>
                     </div>
@@ -42,11 +48,12 @@
                             <select
                                 class="form-select"
                                 id="hypertension"
+                                name="hypertension"
                                 style="background-color: #212529; color: white"
                             >
                                 <option selected>Select Hypertension</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
                             </select>
                         </div>
                     </div>
@@ -56,11 +63,12 @@
                             <select
                                 class="form-select"
                                 id="heart-disease"
+                                name="heart-disease"
                                 style="background-color: #212529; color: white"
                             >
                                 <option selected>Select Heart Disease</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
                             </select>
                         </div>
                     </div>
@@ -72,12 +80,13 @@
                             <select
                                 class="form-select"
                                 id="smoking-history"
+                                name="smoking-history"
                                 style="background-color: #212529; color: white"
                             >
                                 <option selected>Select Smoking History</option>
-                                <option value="Current">Current</option>
-                                <option value="Non-Smoker">Non-Smoker</option>
-                                <option value="Past-Smoker">Past-Smoker</option>
+                                <option value="0">Current</option>
+                                <option value="1">Non-Smoker</option>
+                                <option value="2">Past-Smoker</option>
                             </select>
                         </div>
                     </div>
@@ -107,7 +116,7 @@
                 </div>
 
                 <button
-                    class="text-white bg-indigo-500 border-0 py-2 px-8 mt-4 mx-auto focus:outline-none hover:bg-indigo-600 rounded text-lg">Predict Health</button>
+                    class="text-white bg-indigo-500 border-0 py-2 px-8 mt-4 mx-auto focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Predict Health</button>
             </form>
         </div>
     </div>
