@@ -21,7 +21,7 @@
             </strong>
         </div>
         <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-4 sm:px-0 items-end">
-            <form method="post" action="/prediction" class="flex flex-col w-full">
+            <form method="post" action="/prediction" class="flex flex-col w-full" onsubmit="return validateForm()">
                 {% csrf_token %}
                 <div class="flex flex-wrap -m-2">
                     <div class="p-2 w-full sm:w-1/2">
@@ -129,5 +129,52 @@
     </div>
 </section>
 
+<script>
+    function validateForm() {
+        var gender = document.getElementById("gender").value;
+        var age = document.getElementById("age").value;
+        var hypertension = document.getElementById("hypertension").value;
+        var heartDisease = document.getElementById("heart-disease").value;
+        var smokingHistory = document.getElementById("smoking-history").value;
+        var bmi = document.getElementById("bmi").value;
+        var hba1cLevel = document.getElementById("hba1c-level").value;
+        var bloodGlucoseLevel = document.getElementById("blood-glucose-level").value;
+
+        if (gender == "") {
+            alert("Gender is required.");
+            return false;
+        }
+        if (age == "") {
+            alert("Age is required.");
+            return false;
+        }
+        if (hypertension == "") {
+            alert("Hypertension status is required.");
+            return false;
+        }
+        if (heartDisease == "") {
+            alert("Heart disease status is required.");
+            return false;
+        }
+        if (smokingHistory == "") {
+            alert("Smoking history is required.");
+            return false;
+        }
+        if (bmi == "") {
+            alert("BMI is required.");
+            return false;
+        }
+        if (hba1cLevel == "") {
+            alert("HbA1c level is required.");
+            return false;
+        }
+        if (bloodGlucoseLevel == "") {
+            alert("Blood glucose level is required.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
 
 {% endblock body %}
